@@ -1,0 +1,44 @@
+.dm_layout {
+  width: 1047px;
+  margin: 0 auto;
+}
+
+.dm_layout_top {
+}
+
+.dm_page_content {
+  width: 760px;
+  float: left;
+}
+
+.dm_news_right {
+  width: 280px;
+  float: left;
+}
+
+.dm_fac_content {
+	width: 760px;
+	float: left;
+}
+
+.dm_fac_right {
+	width: 280px;
+	float: left;
+}
+
+.dm_layout_bottom {
+  background: #fff;
+}
+
+.str_podr_left {
+	width: 500px;
+	background-color: #fff;
+}
+
+.str_podr_right_one {
+	width: 250px;
+}
+
+.str_podr_right_two {
+	width: 250px;
+}

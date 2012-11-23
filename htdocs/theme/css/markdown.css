@@ -1,0 +1,15 @@
+.markdown p {
+	margin-bottom: 1em;
+}
+
+.markdown em {
+	font-style: italic;
+}
+
+.markdown strong {
+  font-weight: bold;
+}
+
+.markdown li {
+  list-style: disc inside;
+}

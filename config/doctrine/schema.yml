@@ -1,0 +1,33 @@
+News:
+  columns:
+    title: { type: string(120), notnull: true }
+    body:  { type: clob, extra: markdown }
+    image: { type: integer }
+    is_active:  { type: boolean, notnull: true, default: true }
+  relations:
+    Image:
+      class:  DmMedia
+      local:  image
+      foreignAlias:  News
+Factorys:
+  columns:
+    title: { type: string(120), notnull: true }
+    body:  { type: clob, extra: markdown }
+    image: { type: integer }
+    is_active:  { type: boolean, notnull: true, default: true }
+  relations:
+    Image:
+      class:  DmMedia
+      local:  image
+      foreignAlias:  Factorys
+Podrazdelenia:
+  columns:
+    title: { type: string(120), notnull: true }
+    body:  { type: clob, extra: markdown }
+    image: { type: integer }
+    is_active:  { type: boolean, notnull: true, default: true }
+  relations:
+    Image:
+      class:  DmMedia
+      local:  image
+      foreignAlias:  Podrazdelenia

@@ -1,0 +1,41 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: News
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: news
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=title'
+          - image
+          - body
+          - is_active
+        sort:
+          - title
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - title
+          - is_active
+          - body
+          - image
+      form:
+        display:
+          NONE: [title, is_active]
+          Image: [image_form, image_view]
+          Body: [body]
+        class: NewsAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
