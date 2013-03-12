@@ -69,7 +69,7 @@ class Doctrine_Migration_Diff
         $this->_from = $from;
         $this->_to = $to;
         $this->_startingModelFiles = Doctrine_Core::getLoadedModelFiles();
-        $this->setTmpPath(_sys_get_temp_dir() . DIRECTORY_SEPARATOR . getmypid());
+        $this->setTmpPath(sys_get_temp_dir() . DIRECTORY_SEPARATOR . getmypid());
 
         if ($migration instanceof Doctrine_Migration) {
             $this->_migration = $migration;

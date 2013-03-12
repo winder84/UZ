@@ -1,7 +1,7 @@
 News:
   columns:
     title: { type: string(120), notnull: true }
-    body:  { type: clob, extra: markdown }
+    body:  { type: clob, extra: ckeditor }
     image: { type: integer }
     is_active:  { type: boolean, notnull: true, default: true }
   relations:
@@ -12,7 +12,7 @@ News:
 Factorys:
   columns:
     title: { type: string(120), notnull: true }
-    body:  { type: clob, extra: markdown }
+    body:  { type: clob, extra: ckeditor }
     image: { type: integer }
     is_active:  { type: boolean, notnull: true, default: true }
   relations:
@@ -23,7 +23,7 @@ Factorys:
 Podrazdelenia:
   columns:
     title: { type: string(120), notnull: true }
-    body:  { type: clob, extra: markdown }
+    body:  { type: clob, extra: ckeditor }
     image: { type: integer }
     is_active:  { type: boolean, notnull: true, default: true }
   relations:

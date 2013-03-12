@@ -1,0 +1,5 @@
+<?php
+  if(strpos($_SERVER['REQUEST_URI'],'struktura-kompanii')!='false'){
+  echo '<a style="color: red;">КРУПНЫЙ АГРО_ПРОМЫШЛЕННЫЙ ХОЛДИНГ ЮГА РОССИИ</a>';
+};
+?>

@@ -12,7 +12,8 @@ class ProjectConfiguration extends dmProjectConfiguration
     
     $this->enablePlugins(array(
       // add plugins you want to enable here
-    ));
+		'dmCkEditorPlugin'
+	));
 
     $this->setWebDir(sfConfig::get('sf_root_dir').'/htdocs');
   }

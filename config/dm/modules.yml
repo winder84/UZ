@@ -6,6 +6,10 @@ Content:
       components:
         header:
         footer:
+    Header_uz:
+      page: true
+      components:
+        show:
     News:
       page: true
       components:
