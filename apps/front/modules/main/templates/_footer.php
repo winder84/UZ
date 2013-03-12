@@ -1,7 +1,7 @@
 <table class="footer_table">
 	<tr>
 		<td class="footer_table_left">
-			<a href="adresnaya-kniga" style="color: #242424;">Обратная связь</a>
+			<a href="/adresnaya-kniga/po-geografii" style="color: #242424;">Обратная связь</a>
 			<br />
 			Телефон офиса в г.Таганроге: +7(8634)37-63-73
 			<br />

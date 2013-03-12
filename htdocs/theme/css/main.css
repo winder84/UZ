@@ -433,6 +433,14 @@ h4 {
 	padding-left: 100px;
 }
 
+.podrazdel {
+	float: right;
+	background: url("../images/UZ/sprinkler.png") no-repeat;
+	width: 250px;
+	padding-top: 230px;
+	margin: 0 0 0 10px;
+}
+
 .podrazdel ul {
 	list-style: none;
 	margin: 0;
@@ -458,11 +466,6 @@ h4 {
 	margin: 40px 0 0 55px;
 }
 
-.podrazdel {
-	margin: 0 0 30px 5px;
-	width: 220px;
-}
-
 .podrazdel_title {
 	font-family: Arial;
 	color: green;
@@ -475,6 +478,10 @@ h4 {
 	color: #666;
 	padding-right: 50px;
 	font-weight: normal;
+}
+
+.ross_text {
+	float: right;
 }
 
 .ross_text .text_content {
@@ -497,17 +504,8 @@ h4 {
 	color: green;
 }
 
-.struc_list_image .text_content {
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-}
-
-.struc_list_image .text_image {
-	float: left;
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
+.struc_list_image {
+	float: right;
 }
 
 .left_col_infoc {
