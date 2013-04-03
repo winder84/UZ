@@ -1,0 +1,223 @@
+body {
+	background: url("../img/bg1.png") no-repeat;
+}
+
+.content {
+	width: 1047px;
+	margin: 0 auto;
+}
+
+header {
+	background: url("../img/header_main.png") no-repeat;
+	height: 220px;
+	width: 1047px;
+}
+
+footer {
+	width: 1047px;
+	height: 154px;
+	background: #fff;
+}
+
+.footer_table {
+	margin: 50px 0 0 40px;
+	font-family: Arial;
+	font-size: 0.8em;
+	color: #999;
+}
+
+.footer_table_left {
+	padding-top: 30px;
+	padding-left: 150px;
+}
+
+.footer_table_right {
+	padding-top: 10px;
+	padding-left: 100px;
+}
+
+.uz_footer_logo {
+	width: 144px;
+	height: 40px;
+	background: url("../img/logo_uz_footer.png") no-repeat;
+}
+
+.menu_uz {
+	background: url("../img/menu_bg.png") no-repeat;
+	width: 1047px;
+	height: 44px;
+}
+
+.menu_uz ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.menu_uz ul li {
+	padding-top: 10px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.menu_uz ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.grey_line {
+	background: url("../img/grey_line.png") repeat-x;
+	width: 1047px;
+	height: 18px;
+}
+
+.page_content {
+	background: #fff;
+}
+
+.main_block {
+	font-family: Arial;
+	font-size: 12px;
+	width: 320px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main_block h1 {
+	font-size: 16px;
+}
+
+.main_block h2 {
+	font-size: 12px;
+}
+.main_block_left {
+	margin-right: 50px;
+}
+
+.main_block_right ul {
+	padding: 0;
+}
+.main_block_right ul li {
+	margin-top: 10px;
+	list-style-image: url("../img/point.png");
+}
+
+.history_main {
+	background: url("../img/main_history.jpg") no-repeat;
+	width: 737px;
+	height: 254px;
+}
+
+.main_galery {
+	width: 280px;
+	background: #c4e3f3;
+	float: right;
+	height: 560px;
+	margin-top: 30px;
+}
+
+.schema_main {
+	width: 1047px;
+	height: 1251px;
+	background: url("../img/schema_main.png") no-repeat;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.structura {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-bottom: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	vertical-align: top;
+}
+
+.factory_body {
+	width: 500px;
+	margin-left: 40px;
+}
+
+.factory_menu {
+	vertical-align: top;
+	width: 240px;
+	background: url("../img/sprinkler.png") no-repeat;
+	padding-top: 230px;
+}
+
+.factory_slogan {
+	width: 240px;
+	vertical-align: top;
+}
+
+.factory_menu ul {
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+
+.factory_menu ul li a {
+	color: #4682b4;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.factory_menu ul li a:hover {
+	text-decoration: underline;
+}
+
+.factory_menu ul li .dm_current {
+	color: #1B3A6D;
+	font-size: 12px;
+}
+
+.slogan_img {
+	width: 220px;
+	height: 220px;
+	background: url("../img/sunflower.png") no-repeat;
+}
+
+.factory_slogan h1 {
+	font-family: Arial;
+	font-size: 16px;
+	font-style: italic;
+	color: #545250;
+	margin-top: 40px;
+}
+
+.factory_body h1 {
+	font-family: Arial;
+	font-size: 20px;
+	font-style: italic;
+	color: #545250;
+	margin-top: 40px;
+}
+
+.factory_slogan p {
+	font-family: Arial;
+	font-size: 12px;
+	color: #545250;
+}
+
+.factory_body p {
+	font-family: Arial;
+	font-size: 14px;
+	text-align: justify;
+	margin-right: 30px;
+	color: #545250;
+}
+
+.factory_body ul {
+	font-family: Arial;
+	font-size: 14px;
+	text-align: left;
+	margin-right: 30px;
+	color: #545250;
+}
+
+.factory_body ul li {
+	display: list-item;
+	color: green;
+}

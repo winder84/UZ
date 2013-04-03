@@ -1,0 +1,60 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<?php echo $this->headTitle() ?>
+
+		<?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+		<!-- Le styles -->
+		<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+						->prependStylesheet($this->basePath() . '/css/style.css') ?>
+
+		<!-- Scripts -->
+		<?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+									  ->prependFile($this->basePath() . '/js/jquery.min.js')
+									  ->prependFile($this->basePath() . '/js/uz.js') ?>
+
+	</head>
+	<body>
+
+		<div class="content">
+			<header>
+			</header>
+			<div class="menu_uz">
+				<ul>
+					<li><a href="/">О КОМПАНИИ</a></li>
+					<li><a href="/struktura">СТРУКТУРА КОМПАНИИ</a></li>
+					<li><a href="/prod">ПРОДУКТЫ И УСЛУГИ</a></li>
+					<li><a href="/contacts">АДРЕСНАЯ КАРТА</a></li>
+				</ul>
+			</div>
+
+			<div class="page_content">
+				<?php echo $this->content; ?>
+			</div>
+
+			<footer>
+				<div class="grey_line"></div>
+				<table class="footer_table">
+					<tr>
+						<td class="footer_table_left">
+							<a href="/adresnaya-kniga/po-geografii" style="color: #242424;">Обратная связь</a>
+							<br />
+							Телефон офиса в г.Таганроге: +7(8634)37-63-73
+							<br />
+							Электронная почта: <a href="mailto:post@yugzerno.ua" style="color: #242424;">post@yugzerno.ua</a>
+						</td>
+						<td class="footer_table_right">
+							<div class="uz_footer_logo"></div>
+							<br />
+							© Группа компаний ЮГ-Зерно 2010
+						</td>
+					</tr>
+				</table>
+			</footer>
+		</div> <!-- /container -->
+		<?php echo $this->inlineScript() ?>
+	</body>
+</html>
