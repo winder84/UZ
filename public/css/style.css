@@ -77,11 +77,13 @@ footer {
 }
 
 .main_block {
+	color: #545250;
 	font-family: Arial;
 	font-size: 12px;
 	width: 320px;
 	display: inline-block;
 	vertical-align: top;
+	margin: 10px 0;
 }
 
 .main_block h1 {
@@ -113,8 +115,8 @@ footer {
 	width: 280px;
 	background: #c4e3f3;
 	float: right;
-	height: 560px;
-	margin-top: 30px;
+	height: 280px;
+	margin-top: 20px;
 }
 
 .schema_main {
