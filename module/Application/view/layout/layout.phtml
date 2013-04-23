@@ -18,19 +18,43 @@
 
 	</head>
 	<body>
-
 		<div class="content">
 			<header>
+				<?php
+				if(strpos($_SERVER['REQUEST_URI'],'struktura')!==false) {
+					echo '<a class="head_text_stuc">АГРОПРОМЫШЛЕННЫЙ ХОЛДИНГ<br>ЮГА РОССИИ</a>';
+				};
+
+				if(strpos($_SERVER['REQUEST_URI'],'prod')!==false) {
+					echo '<a class="head_text_press-tsentr">АГРОПРОМЫШЛЕННЫЙ ХОЛДИНГ<br>ЮГА РОССИИ</a>';
+				};
+
+				if(strpos($_SERVER['REQUEST_URI'],'contacts')!==false) {
+					echo '<a class="head_text_adresnaya-kniga">АГРОПРОМЫШЛЕННЫЙ ХОЛДИНГ<br>ЮГА РОССИИ</a>';
+				};
+				?>
 			</header>
 			<div class="menu_uz">
 				<ul>
-					<li><a href="/">О КОМПАНИИ</a></li>
-					<li><a href="/struktura">СТРУКТУРА КОМПАНИИ</a></li>
-					<li><a href="/prod">ПРОДУКТЫ И УСЛУГИ</a></li>
-					<li><a href="/contacts">АДРЕСНАЯ КАРТА</a></li>
+					<li><a class="current" id="menu_item1" href="/">О КОМПАНИИ</a></li>
+					<li><a id="menu_item2" href="/struktura">СТРУКТУРА КОМПАНИИ</a></li>
+					<li><a id="menu_item3" href="/prod">ПРОДУКТЫ И УСЛУГИ</a></li>
+					<li><a id="menu_item4" href="/contacts">АДРЕСНАЯ КАРТА</a></li>
 				</ul>
 			</div>
+			<?php
+			if(strpos($_SERVER['REQUEST_URI'],'struktura')!==false) {
+				echo '<script>window.changeShap("../img/struk_shap.png", 292, "menu_item2");</script>';
+			};
 
+			if(strpos($_SERVER['REQUEST_URI'],'prod')!==false) {
+				echo '<script>window.changeShap("../img/prod_shap.png", 260, "menu_item3");</script>';
+			};
+
+			if(strpos($_SERVER['REQUEST_URI'],'contacts')!==false) {
+				echo '<script>window.changeShap("../img/cont_shap.png", 238, "menu_item4");</script>';
+			};
+			?>
 			<div class="page_content">
 				<?php echo $this->content; ?>
 			</div>

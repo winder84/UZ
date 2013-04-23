@@ -66,6 +66,10 @@ footer {
 	color: #000;
 }
 
+.menu_uz ul li .current{
+	color: #666;
+}
+
 .grey_line {
 	background: url("../img/grey_line.png") repeat-x;
 	width: 1047px;
@@ -229,4 +233,34 @@ footer {
 	height: 643px;
 	background: url("../img/schema_prod.png") no-repeat;
 	margin-bottom: 5px;
+}
+
+.head_text_stuc {
+	color: #666;
+	display:block;
+	position: absolute;
+	font-size:12px;
+	text-align:right;
+	margin-left: 60px;
+	padding-top:123px;
+}
+
+.head_text_adresnaya-kniga {
+	color: #666;
+	display:block;
+	font-size:12px;
+	text-align:right;
+	padding-top:75px;
+	position: absolute;
+	margin-left: 60px;
+}
+
+.head_text_press-tsentr {
+	color: #666;
+	display:block;
+	font-size:12px;
+	text-align:right;
+	position: absolute;
+	margin-left: 60px;
+	padding-top:95px;
 }

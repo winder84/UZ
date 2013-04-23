@@ -11,3 +11,9 @@ function factory_change (factory_name) {
 	$('#'+factory_name+'_b').addClass('dm_current');
 
 }
+
+function changeShap(url, height, id) {
+	$("header").css({backgroundImage : "url("+url+")"});
+	$(".menu_uz ul li a").removeClass("current");
+	$("#"+id).addClass("current");
+}
