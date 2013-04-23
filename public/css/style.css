@@ -121,7 +121,7 @@ footer {
 
 .schema_main {
 	width: 1047px;
-	height: 1251px;
+	height: 551px;
 	background: url("../img/schema_main.png") no-repeat;
 	margin-bottom: 20px;
 	margin-top: 20px;
@@ -222,4 +222,11 @@ footer {
 .factory_body ul li {
 	display: list-item;
 	color: green;
+}
+
+.schema_prod {
+	width: 1047px;
+	height: 643px;
+	background: url("../img/schema_prod.png") no-repeat;
+	margin-bottom: 5px;
 }
