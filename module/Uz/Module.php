@@ -9,10 +9,8 @@
 
 // module/Uz/Module.php
 namespace Uz;
-use Uz\Model\Uz;
 use Uz\Model\UzTable;
 use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\TableGateway\TableGateway;
 
 class Module
 {
@@ -38,19 +36,13 @@ class Module
 	public function getServiceConfig()
 	{
 		return array(
-					'factories' => array(
-					'UzModelUzTable' =>  function($sm) {
-							$tableGateway = $sm->get('UzTableGateway');
-							$table = new UzTable($tableGateway);
-							return $table;
-					},
-					'UzTableGateway' => function ($sm) {
-							$dbAdapter = $sm->get('ZendDbAdapterAdapter');
-							$resultSetPrototype = new ResultSet();
-							$resultSetPrototype->setArrayObjectPrototype(new Uz());
-							return new TableGateway('uz', $dbAdapter, null, $resultSetPrototype);
-					},
-		),
+			'factories' => array(
+				'UzModelUzTable' =>  function($sm) {
+					$dbAdapter = $sm->get('ZendDbAdapterAdapter');
+					$table = new UzTable($dbAdapter);
+					return $table;
+				},
+			),
 		);
 	}
 }
