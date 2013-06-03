@@ -8,55 +8,74 @@
  */
 namespace Uz\Model;
 
-use Zend\Db\TableGateway\TableGateway;
+use Zend\Db\Sql\Sql;
 
 class UzTable
 {
 	protected $tableGateway;
 
-	public function __construct(TableGateway $tableGateway)
+	public function __construct($dbad)
 	{
-		$this->tableGateway = $tableGateway;
+		$this->adapter = $dbad;
 	}
 
-	public function fetchAll()
+	public function fetchAll($table)
 	{
-		$resultSet = $this->tableGateway->select();
-		return $resultSet;
+		$adapter = $this->adapter;
+		$sql = new Sql($adapter);
+		$select = $sql->select();
+		$select->from($table);
+		$selectString = $sql->getSqlStringForSqlObject($select);
+		$results = $adapter->query($selectString, $adapter::QUERY_MODE_EXECUTE);
+		return $results;
 	}
 
-	public function getUz($id)
+	public function getOne($table, $aVal)
 	{
-		$id  = (int) $id;
-		$rowset = $this->tableGateway->select(array('id' => $id));
-		$row = $rowset->current();
-		if (!$row) {
-			throw new \Exception("Could not find row $id");
-		}
-		return $row;
+		$adapter = $this->adapter;
+		$sql = new Sql($adapter, $table);
+		$select = $sql->select();
+		$select->where($aVal);
+
+		$statement = $sql->prepareStatementForSqlObject($select);
+		$results = $statement->execute();
+
+		return $results;
 	}
 
-	public function saveUz(Uz $uz)
+	public function updateOne($id, $table,  $uzUpd)
 	{
-		$data = array(
-			'artist' => $uz->artist,
-			'title'  => $uz->title,
-		);
+		$adapter = $this->adapter;
+		$sql = new Sql($adapter);
+		$update = $sql->update($table);
+		$update->where(array('id' => $id));
+		$update->set($uzUpd);
 
-		$id = (int)$uz->id;
-		if ($id == 0) {
-			$this->tableGateway->insert($data);
-		} else {
-			if ($this->getUz($id)) {
-				$this->tableGateway->update($data, array('id' => $id));
-			} else {
-				throw new \Exception('Form id does not exist');
-			}
-		}
+		$statement = $sql->prepareStatementForSqlObject($update);
+		$results = $statement->execute();
+		return $results;
 	}
 
-	public function deleteUz($id)
+	public function delOne($table, $id)
 	{
-		$this->tableGateway->delete(array('id' => $id));
+		$adapter = $this->adapter;
+		$sql = new Sql($adapter);
+		$delete = $sql->delete($table);
+		$delete->where(array('id' => $id));
+
+		$selectString = $sql->getSqlStringForSqlObject($delete);
+		$results = $adapter->query($selectString, $adapter::QUERY_MODE_EXECUTE);
+		return $results;
+	}
+
+	public function addOne($table, $aVals) {
+		$adapter = $this->adapter;
+		$sql = new Sql($adapter);
+		$insert = $sql->insert($table);
+		$insert->values($aVals);
+
+		$selectString = $sql->getSqlStringForSqlObject($insert);
+		$results = $adapter->query($selectString, $adapter::QUERY_MODE_EXECUTE);
+		return $results;
 	}
 }

@@ -1,1 +1,97 @@
+<div class="main_block" style="width: 95%; margin: 20px 30px;">
+	<?php if(isset($aBuy)) {?>
+		<h1 style="font-size: 22px; font-style: italic;">Закупка Товара</h1>
+		<br>
+		<table class="buy_table">
+			<tr class="table_head">
+				<td>Наименование<br>товара</td>
+				<td>Количество</td>
+				<td>Базис<br>поставки</td>
+				<td>Стоимость<br>(руб.тн)</td>
+				<td>Сроки оплаты</td>
+				<td>Сроки доставки</td>
+			</tr>
+			<?php
+			foreach($aBuy as $key => $Buy) {
+				echo '<tr><td colspan="9"><hr style="margin: 0;" size="1" width="100%" /></td></tr>';
+				echo '<tr class="buy_table_tr">';
+
+				echo '<td style="max-width: 200px;">';
+				echo $Buy['title'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Buy['sum'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Buy['bazis'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Buy['price'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Buy['buy_date'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Buy['delivery_date'];
+				echo '</td>';
+
+				echo '</tr>';
+			}
+			?>
+		</table>
+	<?php }?>
+
+	<?php if(isset($aSold)) {?>
+		<h1 style="font-size: 22px; font-style: italic;">Реализация Товара</h1>
+		<br>
+		<table class="buy_table">
+			<tr class="table_head">
+				<td>Наименование<br>товара</td>
+				<td>Количество</td>
+				<td>Базис<br>поставки</td>
+				<td>Стоимость<br>(руб.тн)</td>
+				<td>Сроки оплаты</td>
+				<td>Сроки доставки</td>
+			</tr>
+			<?php
+			foreach($aSold as $key => $Sold) {
+				echo '<tr><td colspan="9"><hr style="margin: 0;" size="1" width="100%" /></td></tr>';
+				echo '<tr class="buy_table_tr">';
+
+				echo '<td style="max-width: 200px;">';
+				echo $Sold['title'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Sold['sum'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Sold['bazis'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Sold['price'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Sold['buy_date'];
+				echo '</td>';
+
+				echo '<td>';
+				echo $Sold['delivery_date'];
+				echo '</td>';
+
+				echo '</tr>';
+			}
+			?>
+		</table>
+	<?php }?>
+</div>
+
 <div class="schema_prod"></div>

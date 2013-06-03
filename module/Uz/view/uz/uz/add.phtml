@@ -1,0 +1,20 @@
+<form method="post" class="edit_form">
+	<label>Добавить строку в таблицу "<?=$msg?>"</label><br><br><br>
+<?php
+	echo "<label>Наименование товара:</label><br>";
+	echo "<input size=\"80\" name=\"title\"><br>";
+	echo "<label>Количество:</label><br>";
+	echo "<input size=\"80\" name=\"sum\"><br>";
+	echo "<label>Базис поставки:</label><br>";
+	echo "<input size=\"80\" name=\"bazis\"><br>";
+	echo "<label>Стоимость (руб.тн):</label><br>";
+	echo "<input size=\"80\" name=\"price\"><br>";
+	echo "<label>Сроки оплаты:</label><br>";
+	echo "<input size=\"80\" name=\"buy_date\"><br>";
+	echo "<label>Сроки доставки:</label><br>";
+	echo "<input size=\"80\" name=\"delivery_date\"><br>";
+?>
+	<input hidden="true" name="changed">
+	<input style="margin: 20px 0 0 0;" type="submit" name="sub_btn" value="Сохранить">
+	<input style="margin: 20px 0 0 0;" type="submit" name="sub_btn" value="Отмена">
+</form>
