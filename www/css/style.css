@@ -99,6 +99,7 @@ footer {
 }
 .main_block_left {
 	margin-right: 50px;
+	padding-left: 20px;
 }
 
 .main_block_right ul {
@@ -113,9 +114,19 @@ footer {
 	background: url("../img/main_history.jpg") no-repeat;
 	width: 737px;
 	height: 254px;
+	margin-left: 20px;
 }
 
 .main_galery {
+	width: 280px;
+	background: #c4e3f3;
+	float: right;
+	height: 280px;
+	margin-top: 20px;
+}
+
+
+.main_galery2 {
 	width: 280px;
 	background: #c4e3f3;
 	float: right;
@@ -263,4 +274,46 @@ footer {
 	position: absolute;
 	margin-left: 60px;
 	padding-top:95px;
+}
+
+.buy_table {
+	width: 100%;
+	border: 1px #999 groove;
+	margin-bottom: 20px;
+}
+
+.table_head {
+	height: 65px;
+	background: url("../img/table_gradient.png") repeat-x;
+	color: #fff;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+}
+
+.buy_table_tr {
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+	text-align: center;
+}
+
+.buy_table_tr td {
+	max-width: 100px;
+	padding: 20px;
+}
+
+.edit_form {
+	margin: 30px;
+	font-family: Arial;
+	font-size: 18px;
+	line-height: 26px;
+	color: #545250;
+}
+
+.edit_form input {
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 18px;
+	color: #545250;
 }
