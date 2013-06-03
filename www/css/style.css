@@ -97,6 +97,41 @@ footer {
 .main_block h2 {
 	font-size: 12px;
 }
+
+.history_main {
+	color: #545250;
+	font-family: Arial;
+	font-size: 12px;
+	width: 320px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 0;
+}
+
+.history_main h1 {
+	font-size: 16px;
+}
+
+.history_main h2 {
+	font-size: 12px;
+}
+
+.mini_logo {
+	background: url("../img/mini_logo.png") no-repeat;
+	width: 62px;
+	height: 41px;
+	position: absolute;
+	margin-left: 140px;
+	margin-top: 10px;
+}
+
+.history_img {
+	background: url("../img/history_img.png") no-repeat;
+	width: 386px;
+	height: 129px;
+	position: absolute;
+	margin-left: 315px;
+}
 .main_block_left {
 	margin-right: 50px;
 	padding-left: 20px;
@@ -111,7 +146,6 @@ footer {
 }
 
 .history_main {
-	background: url("../img/main_history.jpg") no-repeat;
 	width: 737px;
 	height: 254px;
 	margin-left: 20px;
